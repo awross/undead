@@ -1,0 +1,3 @@
+SELECT * FROM bgundead.game_op WHERE NOT EXISTS (SELECT * FROM bgundead.event_roster WHERE event_roster.mid = game_op.mid AND event_roster.eid = game_op.eid)
+
+SELECT * FROM bgundead.event_roster WHERE NOT EXISTS (SELECT * FROM bgundead.game_op WHERE game_op.mid = event_roster.mid AND game_op.eid = event_roster.eid)

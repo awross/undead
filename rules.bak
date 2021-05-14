@@ -1,0 +1,352 @@
+<?php
+include("core/coreHead.php");
+
+if ($_SESSION['loggedin'] == 'true') {
+	if ($_SESSION['rules'] == 0) {
+		$content .= "
+			<h2>YOU MUST AGREE TO THE RULES OF THIS ORGANIZATION IN ORDER TO USE THIS SITE</h2>
+		";
+	}
+}
+
+$content .= "
+	<font face='verdana' color='white'><big><big><b>Overview</b> 
+	</big></big><br> 
+	Humans Vs. Zombies is essentially a game of tag with 2 teams....
+	Humans, and Zombies. All players start off as humans, with the
+	exception of a set number who have volunteered, and are chosen to be
+	Original Zombie(s). The Zombie(s) will start the 'infection' by
+	tagging, or &#8220;feeding on&#8221;, members of the Human team. The Zombies must
+	tag a Human at least once every 3 days; otherwise they 'starve-out',
+	and are then out of normal gameplay. Humans may defend themselves fom
+	Zombies with approved equipment (listed below).
+	<br> 
+	<br> 
+	The game will run ALL day, EACH day, from
+	the starting
+	date until the posted
+	ending time for the final stand.
+	<br> 
+	<br> 
+	<big><b>Objective
+	</b></big><br> 
+	The Zombies win if/when all Human players have been turned into
+	Zombies, or by preventing the Humans from escaping at the <b>Final
+	Stand</b>. The Humans can win either by outlasting all the
+	Zombies (so
+	that they 'starve-out'), or by escaping them at the <b>Final
+	Stand</b>.
+	<br> 
+	<br> 
+	<br> 
+	<font color='yellow'><big><big><b>Required
+	Equipment</b> 
+	</big></big><br> 
+	<br> 
+	-&nbsp;<b>Current BG UNDEAD bandanna</b> (to be purchased by the player each year)
+	<br> 
+	- <b>Human Defensive measures options</b> (Humans can use <b>any
+	combination</b> of these items):
+	<br> 
+	&nbsp;&nbsp; &nbsp;+ <span style='font-weight: bold;'>'Nerf'-style
+	soft foam blaster</span>.<br> 
+	</font></font><font face='verdana'><font color='yellow'><font color='red'>&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp; </font><small><font color='red'>- <span style='font-weight: bold;'>MUST REMAIN BRIGHT, NON-METALLIC
+	COLORS</span></font><small style='font-weight: bold;'>.
+	</small></small></font></font><br> 
+	<font face='verdana'><font color='yellow'>&nbsp;&nbsp;
+	&nbsp;+ <span style='font-weight: bold;'>PVC&nbsp;blowpipe
+	for s</span></font></font><font style='font-weight: bold;' face='verdana'><font color='yellow'>oft-foam darts</font></font><font face='verdana'><font color='yellow'><br> 
+	</font></font><font face='verdana'><font color='yellow'>&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp; <small>-</small></font></font><font face='verdana'><font color='yellow'>&nbsp;<small style='color: yellow;'>length ONLY up to 1 meter.</small><br> 
+	</font></font><font face='verdana'><font color='yellow'>&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp; <small>- only up to 5 darts may be
+	loaded into blowpipe at once</small></font></font>.<br> 
+	<font face='verdana'><font color='yellow'>&nbsp;&nbsp;
+	&nbsp;+ <span style='font-weight: bold;'>Balled-up
+	Socks</span> </font></font><font face='verdana'><font color='yellow'> (to be thrown).</font></font><br> 
+	<big><font face='verdana'><font color='yellow'>&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp; <small>-
+	<small>socks may be taped or rubber-banded for
+	stability.
+	</small></small></font></font></big><font face='verdana'><font color='yellow'><br>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <small>-&nbsp;</small></font></font><font face='verdana'><small><font color='yellow'><font color='red'>with
+	NOTHING inside of them for weight/hardness/impact!</font></font></small><span style='color: red;'><br>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; - <small><span style='font-weight: bold;'>SOCKS MUST BE THROWN -
+	THEY DO NOT
+	STUN&nbsp;WHILE STILL IN HAND</span></small></span> 
+	<br> 
+	<font face='verdana'><font color='yellow'>&nbsp;&nbsp;&nbsp;
+	+ <b>Standard-size</b> 
+	marshmallows (to be thrown).<br></font></font><font face='verdana'><font color='yellow'>&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp; <small>- no more than 2
+	marshmallows may be thrown from one hand at a time.</small></font></font><br></font><font face='verdana'><font face='verdana'><font color='yellow'>&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp; <small>- <span style='color: red;'>Marshmallows must be thrown - they do not stun while still in hand.</span></small></font></font></font><br><font face='verdana'> 
+	<font face='verdana'><font color='yellow'>&nbsp;&nbsp;&nbsp;
+	+ Your ability to run away!<br> 
+	- <b>ID Cards</b> (to be made by the player)
+	- Cards must contain:
+	<br> 
+	&nbsp;&nbsp;&nbsp; + Player
+	name.<br> 
+	&nbsp;&nbsp;&nbsp; + Player
+	ID number (received when registering).</font><br> 
+	<br> 
+	<br> 
+	<font color='#33ff33'><b><big><big>Safety
+	Rules</big> 
+	</big></b><br> 
+	Rules are created for the safety of all players, and are strictly
+	enforced. &nbsp;Violation of safety rules will result in a <b>ban</b> 
+	from the game and dealings with the proper authorities.
+	<br> 
+	<br> 
+	- <span style='font-weight: bold;'>Human Defensive
+	measures may ONLY be those listed above.
+	</span><br style='font-weight: bold;'> 
+	<span style='font-weight: bold;'>&nbsp;&nbsp;
+	&nbsp;</span>+ Unless
+	<span style='font-weight: bold;'>specifically</span> 
+	given permission by admins.<br style='font-weight: bold;'> 
+	- <b>NO HAND-TO-HAND 'COMBAT' IS PERMITTED</b>.
+	<br> 
+	- <b>NO PLAYING IN SAFE ZONES</b><br> 
+	</font></font><font face='verdana'><font color='#33ff33'>&nbsp;&nbsp;&nbsp; - These areas
+	are&nbsp;'<b>safe</b>' and out of play 24/7:<br> 
+	</font></font><font face='verdana'><font color='#33ff33'>&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp; + <span style='font-weight: bold;'>ANY STAIRCASE ON CAMPUS IS
+	OFF-LIMITS</span></font></font><br> 
+	<font face='verdana'><font color='#33ff33'>&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp; + <span style='font-weight: bold;'>ALL</span> CAMPUS
+	BUILDINGS
+	<br> 
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; + <span style='font-weight: bold;'>ANY CLASS AREAS</span><br> 
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp; - <small>Art building sculpture garden.</small><br> 
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;+
+	Vehicles
+	(bikes, cars, buses, skateboards, rollerblades, anything on wheels)<br> 
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;+ Players
+	at
+	work, <span style='font-weight: bold;'>in class,</span> 
+	or in club activities.
+	<br> 
+	&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; + You are
+	only safe <b>INSIDE OF
+	SAFE ZONES.</b> <br> 
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp; - <small>If you
+	must resolve a debate during play,&nbsp;secure the area first or
+	move
+	to a safe zone.</small><br> 
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp; - <small><b>If
+	you get tagged outside (not in a safe zone) while arguing
+	about a tag, it's considered fair.</b> 
+	</small></font></font><br> 
+	<font face='verdana'><font color='#33ff33'>- <b>NO
+	PLAYING OUT OF BOUNDS</b></font></font><br> 
+	<font face='verdana'><font color='#33ff33'>&nbsp;&nbsp;
+	&nbsp;+ Boundaries are the sidewalks on: Wooster, Thurstin, </font></font><font face='verdana'><font color='#33ff33'>Merry, and
+	Mercer roads.</font></font><br> 
+	<font face='verdana'><font color='#33ff33'>&nbsp;&nbsp;
+	&nbsp;+ <a href='http://www.bgsu.edu/studentlife/organizations/undead/HvZ_grid.pdf'>Click here for a grid
+	of the in-play area</a>.</font></font><br> 
+	<font face='verdana'><font color='#33ff33'>- <b>ABSOLUTELY,
+	POSITIVELY NO PLAY
+	IN THE GRAVEYARD</b> 
+	<br> 
+	<br> 
+	</font><br> 
+	<br> 
+	<font color='#33ccff'><b><big><big>Human
+	Rules</big></big></b><br> 
+	- Must login to the game website from campus at least once per day, to show that they are remaining
+	active.
+	<br> 
+	- Must keep ID Card on person at all times in-game.
+	<br> 
+	-
+	Humans <span style='font-weight: bold;'>MUST</span> wear their bandana around their arm or leg, and it <span style='font-weight: bold;'>MUST</span> 
+	be clearly visible at all times in-game.
+	<br> 
+	-
+	May (and probably should) stun Zombies for 10 minutes by utilizing:
+	foam dart, sock, or marshmallow.
+	<br> 
+	- Humans
+	can&#8217;t stun Zombies from inside a safe zone. If you&#8217;re trapped,
+	find another exit or call for backup.
+	<br> 
+	-
+	Once tagged, player <span style='font-weight: bold;'>MUST</span> give ID Card to the tagging Zombie, and
+	switch their bandana to the 'stunned' position. After 10 minutes,
+	player switches bandanna to head, thus becoming an &#8220;infectious&#8221; Zombie,
+	and is now able to tag Humans.</font><br> 
+	<br> 
+	<br> 
+	<font color='#ff9900'><b><big><big>Zombie
+	Rules</big></big></b><br> 
+	- <span style='font-weight: bold;'>Must 'feed' by tagging
+	a Human at least once every 3 days, or Zombie
+	will 'starve-out' of normal gameplay.
+	</span><br></font></font></font><font face='verdana'><font face='verdana'><font color='#ff9900'> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +
+	When Zombies make a tag, they get 2 additional 'feed' codes, to distribute to other Zombies.<br></font></font></font><font face='verdana'><font face='verdana'><font color='#ff9900'> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +
+	Feed codes will expire if not used quickly - Zombies only like fresh meat!</font></font></font><br><font face='verdana'><font face='verdana'><font color='#ff9900'>- <span style='font-weight: bold;'>Must wear bandana
+	EASILY VISIBLE around their head, with the logo facing out. Acceptable ZOMBIE ways
+	to wear bandanna are: </span><br> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +
+	'Rambo'-style headband.
+	<br> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +
+	'doo-rag' style headwrap.
+	<br></font></font></font><font face='verdana'><font face='verdana'><font color='#ff9900'> 
+	- <span style='font-weight: bold;'>If&nbsp;bandanna
+	is removed or obscured, it must be worn visibly
+	around the neck for 10 minutes before tagging anyone.</span><br></font></font></font><font face='verdana'><font face='verdana'><font color='#ff9900'>- <span style='font-weight: bold;'>Original Zombies will
+	be marked as Humans until their first 5 tags or noon of the first day,
+	whichever comes first.
+	</span><br> 
+	- <span style='font-weight: bold;'>To tag a Human, Zombie
+	must place one hand on each arm (above the elbow) of the
+	Human at the same time. </span><br> 
+	&nbsp;&nbsp;&nbsp; + Collect the Human&#8217;s ID Card and report
+	the tag
+	on the website. <span style='font-style: italic;'>Tags
+	must be reported <span style='font-weight: bold;'>ASAP,</span> so that the new Zombie can hunt!</span><span style='font-style: italic;'></span><br> 
+	-<span style='font-weight: bold;'> If hit with a foam
+	dart, sock, or marshmallow, Zombies are 'stunned'
+	for 10 minutes.</span><br> 
+	&nbsp;&nbsp; &nbsp;+ Bandanna
+	must be switched to around the neck
+	to show stunned status, and Zombie must leave the immediate area.<br> 
+	&nbsp;&nbsp;&nbsp; + Player may <span style='font-weight: bold;'>NOT touch</span> or
+	interact with
+	other players,<span style='font-style: italic;'> 
+	</span>including:<span style='font-style: italic;'> 
+	shielding other Zombies, chasing a Human, or calling other Zombies.</span><br style='font-style: italic;'> 
+	&nbsp;&nbsp; &nbsp;+ Zombies
+	have 5 'stuns' per day. After&nbsp;5th&nbsp;stun, Zombie is
+	&#8220;regenerating&#8221; and cannot tag any Humans until the next day.
+	<br> 
+	&nbsp;&nbsp; &nbsp;+ If hit
+	again while stunned, the 10 minutes is
+	reset, but the Zombie does NOT lose another daily stun.
+	<br> 
+	- <span style='font-weight: bold;'>May not actively
+	shield themselves using&nbsp;held objects (i.e. umbrella,
+	backpack, etc)<br> 
+	</span>&nbsp;&nbsp;&nbsp; + May (and probably should)
+	run, dodge, duck, and
+	hide behind stationary grounded objects.
+	<br>- <span style='font-weight: bold;'>Zombies must have both
+	feet firmly planted out of a safe zone to tag a
+	Human</span>.<br> 
+	&nbsp;&nbsp;&nbsp; + No jumping or diving tags into a
+	building.<br> 
+	<br> 
+	<br> 
+	<br> 
+	<b><big><big><font color='#33ff33'>Additional
+	Rules
+	</font></big></big></b><font color='#33ff33'><br> <br>
+	<b>
+		<center>
+			The leadership of BG Undead and Player Moderators,
+			<br />
+			chosen by the leadership to act as
+			<br />
+			Referee and impartial judge, have the final say
+			<br />
+			in ALL disputes.
+		</center>
+	</b>
+	<br>
+	- NO biting whatsoever.
+	<br> 
+	- Seriously, <b>NO BITING WHATSOEVER</b>.
+	<br>
+	- You are <span style='font-weight: bold;'>NOT</span> 
+	Superman. Do not leap off of buildings or decks. You can break bones
+	that way. &nbsp;You know
+	who you are.
+	<br> 
+	- The administration has asked us to <span style='font-weight: bold;'>stay out of trees.</span> 
+	&nbsp;Please respect that.<br> 
+	- The game will begin at 7am on the starting date, and will run from
+	7am until midnight, each day until the completion of the final stand.</font><br> 
+	<br> 
+	<br> 
+	<font color='white'><b><big><big>The
+	Final Stand
+	</big></big></b><br> 
+	- The Final Stand will occur in the last hour of game play, at a time
+	posted by the Officers &amp; Admins.
+	<br> 
+	- <b>AMNESTY</b> - No Human vs Zombie interaction will
+	occur for half an hour
+	before the Final Stand begins.
+	<br> 
+	- Any remaining Humans will gather on the Jerome Library upper deck at
+	the start of the Stand.
+	<br> 
+	- If no Humans are left, or none show up to the Stand, the Humans lose.
+	<br> 
+	- At the designated time, Zombies will commence the final 'assault' on
+	the Humans.
+	<br> 
+	- Zombies stunned during the Final Stand must WALK to the bell tower as
+	their stun. <br> 
+	- Humans tagged during the Final Stand must WALK to the bell tower as
+	their 'turn'.
+	<br> 
+	- Humans must hold the Library deck until 10 minutes are left in play,
+	which is when 'extraction' becomes available.
+	<br> 
+	- Humans must get to the Union Oval by the end of play to be 'rescued'.
+	&nbsp;Anyone who does NOT make it to the Oval in time is considered
+	'lost'.
+	<br> 
+	- If at least 1/3 of the Humans who started the stand are 'rescued',
+	the
+	humans consider it a win.
+	</font><br> 
+	<br> 
+	<br> 
+	<font color='#33ff33'><big><big><b>Other
+	Policies
+	</b></big></big><br> 
+	- Any Rules are subject to change during play ONLY by UNANIMOUS
+	agreement of the admin team. Any Rules changes will be posted on the
+	BGUNDEAD website, the GAME homepage, and EMAILED out to all players.
+	<br> 
+	<br> 
+	<br> 
+	<big><big><b>Final Word
+	</b></big></big><br> 
+	- Abide by the DBAD policy (Don&#8217;t Be A Dick), we all just want to have
+	fun so obey the rules and use common sense. Violators of the DBAD
+	policy will be dealt with accordingly, including possible removal of
+	game and dealing with University authorities.<br> 
+	-&nbsp;examples
+	of DBAD violations are: Zombies picking up darts, any player willfully
+	injuring
+	another player, any player willfully or repeatedly breaking any rules.</font> 
+	</font></font></font> 
+
+";
+
+if ($_SESSION['loggedin'] == 'true') {
+	if ($_SESSION['rules'] == 0) {
+		$content .= "
+			<br /><br /><br />
+			<form action='setRules.php' method='post'>
+			<input type='hidden' name='check' value='true' />
+			<input type='submit' value='I Have Read All The Rules And I Agree To Abide By Them' />
+			</form>	
+		";
+	}
+}
+
+include("core/coreFoot.php");
+?>
